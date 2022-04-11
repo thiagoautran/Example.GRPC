@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Example.GRPC.API</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Example.GRPC.ApplicationCore\Example.GRPC.ApplicationCore.csproj" />
+    <ProjectReference Include="..\Example.GRPC.Infrastructure\Example.GRPC.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
