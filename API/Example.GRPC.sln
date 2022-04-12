@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.GRPC.API", "Example.GRPC.API\Example.GRPC.API.csproj", "{7E336EFF-48D9-4A88-B3F1-85D3A27CE1D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.GRPC.API", "Example.GRPC.API\Example.GRPC.API.csproj", "{7E336EFF-48D9-4A88-B3F1-85D3A27CE1D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

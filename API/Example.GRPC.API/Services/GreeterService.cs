@@ -1,4 +1,3 @@
-using Example.GRPC.API;
 using Grpc.Core;
 
 namespace Example.GRPC.API.Services
