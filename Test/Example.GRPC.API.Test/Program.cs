@@ -1,4 +1,11 @@
-﻿using Example.GRPC.API.Test.Infrastructure;
+﻿using Example.GRPC.API;
+using Grpc.Net.Client;
 
-var test = new Test();
-await test.SayHelloAsync();
+using var channel = GrpcChannel.ForAddress("https://localhost:7145");
+var client = new Greeter.GreeterClient(channel);
+var reply = await client.SayHelloAsync(new HelloRequest
+{
+    Name = "Thiago"
+});
+
+Console.WriteLine($"Result: {reply.Message}");
