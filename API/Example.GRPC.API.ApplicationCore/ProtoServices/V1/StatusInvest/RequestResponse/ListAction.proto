@@ -2,13 +2,13 @@ syntax = "proto3";
 
 import "google/protobuf/timestamp.proto";
 
-option csharp_namespace = "Example.GRPC.API.ApplicationCore.ProtoServices.StatusInvest.RequestResponse.ListFII";
+option csharp_namespace = "Example.GRPC.API.ApplicationCore.ProtoServices.V1.StatusInvest.RequestResponse.ListAction";
 
-message ReturnFII {
-	repeated FII fiis = 1;
+message ReturnAction {
+	repeated Action actions = 1;
 }
 
-message FII {
+message Action {
 	string id = 1;
 	string companyName = 2;
 	string ticker = 3;

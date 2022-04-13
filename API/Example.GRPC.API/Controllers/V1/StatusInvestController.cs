@@ -1,9 +1,9 @@
-using Example.GRPC.API.ApplicationCore.ProtoServices.StatusInvest.RequestResponse.ListAction;
-using Example.GRPC.API.ApplicationCore.ProtoServices.StatusInvest.RequestResponse.ListFII;
-using Example.GRPC.API.ApplicationCore.ProtoServices.StatusInvest;
+using Example.GRPC.API.ApplicationCore.ProtoServices.V1.StatusInvest.RequestResponse.ListAction;
+using Example.GRPC.API.ApplicationCore.ProtoServices.V1.StatusInvest.RequestResponse.ListFII;
+using Example.GRPC.API.ApplicationCore.ProtoServices.V1.StatusInvest;
 using Grpc.Core;
 
-namespace Example.GRPC.API.Services
+namespace Example.GRPC.API.Controllers.V1
 {
     public class StatusInvestController : StatusInvest.StatusInvestBase
     {
@@ -18,9 +18,9 @@ namespace Example.GRPC.API.Services
         {
             var result = new ReturnAction();
 
-            result.Actions.Add(new List<ApplicationCore.ProtoServices.StatusInvest.RequestResponse.ListAction.Action>
+            result.Actions.Add(new List<ApplicationCore.ProtoServices.V1.StatusInvest.RequestResponse.ListAction.Action>
             {
-                new ApplicationCore.ProtoServices.StatusInvest.RequestResponse.ListAction.Action
+                new ApplicationCore.ProtoServices.V1.StatusInvest.RequestResponse.ListAction.Action
                 {
                     Id = Guid.NewGuid().ToString(),
                     CompanyId = 1,
@@ -37,9 +37,9 @@ namespace Example.GRPC.API.Services
         {
             var result = new ReturnFII();
 
-            result.Fiis.Add(new List<ApplicationCore.ProtoServices.StatusInvest.RequestResponse.ListFII.FII>
+            result.Fiis.Add(new List<ApplicationCore.ProtoServices.V1.StatusInvest.RequestResponse.ListFII.FII>
             {
-                new ApplicationCore.ProtoServices.StatusInvest.RequestResponse.ListFII.FII
+                new ApplicationCore.ProtoServices.V1.StatusInvest.RequestResponse.ListFII.FII
                 {
                     Id = Guid.NewGuid().ToString(),
                     CompanyId = 1,

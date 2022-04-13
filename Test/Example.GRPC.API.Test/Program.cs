@@ -1,4 +1,4 @@
-﻿using Example.GRPC.API.ApplicationCore.ProtoServices.StatusInvest;
+﻿using Example.GRPC.API.ApplicationCore.ProtoServices.V1.StatusInvest;
 using Grpc.Net.Client;
 
 using var channel = GrpcChannel.ForAddress("https://localhost:7145");
