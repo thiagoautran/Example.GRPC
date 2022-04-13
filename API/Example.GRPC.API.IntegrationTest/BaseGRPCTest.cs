@@ -45,12 +45,9 @@ namespace Example.GRPC.API.IntegrationTest
         {
             var builder = WebApplication.CreateBuilder(new WebApplicationOptions
             {
-                ApplicationName = "test",
                 EnvironmentName = _environment
             });
             
-            builder.WebHost.UseSetting("https_port", "4567");
-
             var startup = new Startup();
             startup.ConfigureServices(builder.Services, builder.Configuration);
 
