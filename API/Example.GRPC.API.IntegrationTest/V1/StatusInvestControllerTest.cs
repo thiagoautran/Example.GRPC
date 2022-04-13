@@ -2,7 +2,6 @@ using Example.GRPC.API.ApplicationCore.ProtoServices.V1.StatusInvest;
 using Grpc.Net.Client;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Example.GRPC.API.IntegrationTest.V1

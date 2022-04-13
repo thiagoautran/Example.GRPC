@@ -1,14 +1,15 @@
-﻿using Example.GRPC.API.ApplicationCore.Interfaces;
+﻿using Autransoft.Test.Lib.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
+using System.Reflection;
 
 namespace Example.GRPC.API.IntegrationTest
 {
     public class BaseGRPCTest<Startup> : IDisposable
-        where Startup : IStartup, new()
+        where Startup : class
     {
         private WebApplication _app;
         private string _environment;
@@ -43,18 +44,25 @@ namespace Example.GRPC.API.IntegrationTest
 
         private WebApplication CreateHost()
         {
+            MethodInfo method;
+
             var builder = WebApplication.CreateBuilder(new WebApplicationOptions
             {
                 EnvironmentName = _environment
             });
-            
-            var startup = new Startup();
-            startup.ConfigureServices(builder.Services, builder.Configuration);
+
+            var constructorParams = StartupHelper.GetConstructorParams<Startup>(builder.Services, builder.Configuration);
+            var startup = (Startup)Activator.CreateInstance(typeof(Startup), constructorParams);
+
+            method = StartupHelper.GetMethod<Startup>("ConfigureServices");
+            StartupHelper.InvokeConfigureServices(startup, method, builder.Services, builder.Configuration);
 
             AddToDependencyInjection(builder.Services, builder.Configuration);
 
             var app = builder.Build();
-            startup.Configure(app, app.Environment);
+
+            method = StartupHelper.GetMethod<Startup>("Configure");
+            StartupHelper.InvokeConfigure(startup, method, app, app.Environment);
 
             var task = app.StartAsync();
             task.Wait();

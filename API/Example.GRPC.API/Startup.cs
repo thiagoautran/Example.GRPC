@@ -1,8 +1,15 @@
 ﻿namespace Example.GRPC.API
 {
-    public class Startup : Example.GRPC.API.ApplicationCore.Interfaces.IStartup
+    public class Startup
     {
-        public void ConfigureServices(IServiceCollection services, IConfiguration configuration)
+        public IConfiguration Configuration { get; set; }
+
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public void ConfigureServices(IServiceCollection services)
         {
             services.AddGrpc();
         }
