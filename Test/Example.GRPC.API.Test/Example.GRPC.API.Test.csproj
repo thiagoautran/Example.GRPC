@@ -17,7 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\statusInvest.proto" GrpcServices="Client" />
+	<Protobuf Include="ProtoServices\StatusInvest\RequestResponse\ListFII.proto" GrpcServices="Client" />
+	<Protobuf Include="ProtoServices\StatusInvest\RequestResponse\ListAction.proto" GrpcServices="Client" />
+	<Protobuf Include="ProtoServices\StatusInvest\statusInvest.proto" GrpcServices="Client" />
   </ItemGroup>
 
 </Project>

@@ -7,8 +7,16 @@ option csharp_namespace = "Example.GRPC.API.ApplicationCore.Protos";
 package statusInvest;
 
 service StatusInvest {
-  rpc ListAction (Empty) returns (Action);
-  rpc ListFII (Empty) returns (FII);
+  rpc ListAction (Empty) returns (ReturnAction);
+  rpc ListFII (Empty) returns (ReturnFII);
+}
+
+message ReturnAction {
+	repeated Action actions = 1;
+}
+
+message ReturnFII {
+	repeated FII fiis = 1;
 }
 
 message Action {

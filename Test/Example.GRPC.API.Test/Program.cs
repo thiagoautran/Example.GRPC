@@ -1,11 +1,11 @@
-﻿using Example.GRPC.API.ApplicationCore.Protos;
+﻿using Example.GRPC.API.ApplicationCore.ProtoServices.StatusInvest;
 using Grpc.Net.Client;
 
 using var channel = GrpcChannel.ForAddress("https://localhost:7145");
 var client = new StatusInvest.StatusInvestClient(channel);
 
-var action = await client.ListActionAsync(new Empty());
-var fii = await client.ListFIIAsync(new Empty());
+var actions = await client.ListActionAsync(new Empty());
+var fiis = await client.ListFIIAsync(new Empty());
 
-Console.WriteLine($"Action: {action}");
-Console.WriteLine($"FII: {fii}");
+Console.WriteLine($"Action: {actions}");
+Console.WriteLine($"FII: {fiis}");

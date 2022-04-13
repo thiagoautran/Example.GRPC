@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Example.GRPC.API.ApplicationCore.ProtoServices.StatusInvest.RequestResponse.ListAction";
+
+message ReturnAction {
+	repeated Action actions = 1;
+}
+
+message Action {
+	string id = 1;
+	string companyName = 2;
+	string ticker = 3;
+	int32 companyId = 4;
+	google.protobuf.Timestamp lastUpdate = 5;
+}

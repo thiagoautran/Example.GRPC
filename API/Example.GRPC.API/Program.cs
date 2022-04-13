@@ -6,6 +6,6 @@ builder.Services.AddGrpc();
 
 var app = builder.Build();
 
-app.MapGrpcService<StatusInvestService>();
+app.MapGrpcService<StatusInvestController>();
 
 app.Run();

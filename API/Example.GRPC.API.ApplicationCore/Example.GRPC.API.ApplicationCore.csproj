@@ -8,10 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.44.0" />
+    <PackageReference Include="protobuf-net.Core" Version="3.0.101" />
   </ItemGroup>
 
   <ItemGroup>
-	<Protobuf Include="Protos\statusInvest.proto" GrpcServices="Server" />
+	<Protobuf Include="ProtoServices\StatusInvest\RequestResponse\ListFII.proto" GrpcServices="Server" />
+	<Protobuf Include="ProtoServices\StatusInvest\RequestResponse\ListAction.proto" GrpcServices="Server" />
+	<Protobuf Include="ProtoServices\StatusInvest\statusInvest.proto" GrpcServices="Server" />
   </ItemGroup>
 
 </Project>
