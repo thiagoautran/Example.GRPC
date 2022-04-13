@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.GRPC.API", "Example.GRPC.API\Example.GRPC.API.csproj", "{7E336EFF-48D9-4A88-B3F1-85D3A27CE1D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.GRPC.API.ApplicationCore", "Example.GRPC.API.ApplicationCore\Example.GRPC.API.ApplicationCore.csproj", "{8B58B60A-FB39-4CC3-9BD9-145E34F75822}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7E336EFF-48D9-4A88-B3F1-85D3A27CE1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E336EFF-48D9-4A88-B3F1-85D3A27CE1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E336EFF-48D9-4A88-B3F1-85D3A27CE1D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B58B60A-FB39-4CC3-9BD9-145E34F75822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B58B60A-FB39-4CC3-9BD9-145E34F75822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B58B60A-FB39-4CC3-9BD9-145E34F75822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B58B60A-FB39-4CC3-9BD9-145E34F75822}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

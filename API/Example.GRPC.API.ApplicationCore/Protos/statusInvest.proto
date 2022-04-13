@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Example.GRPC.API.ApplicationCore.Protos";
+
+package statusInvest;
+
+service StatusInvest {
+  rpc ListAction (Empty) returns (Action);
+  rpc ListFII (Empty) returns (FII);
+}
+
+message Action {
+  string id = 1;
+  string companyName = 2;
+  string ticker = 3;
+  int32 companyId = 4;
+  google.protobuf.Timestamp lastUpdate = 5;
+}
+
+message FII {
+  string id = 1;
+  string companyName = 2;
+  string ticker = 3;
+  int32 companyId = 4;
+  google.protobuf.Timestamp lastUpdate = 5;
+}
+
+message Empty {}
