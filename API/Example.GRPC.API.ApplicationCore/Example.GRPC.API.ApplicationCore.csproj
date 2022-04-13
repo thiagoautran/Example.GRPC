@@ -12,9 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-	<Protobuf Include="ProtoServices\V1\StatusInvest\RequestResponse\ListFII.proto" GrpcServices="Server" />
-	<Protobuf Include="ProtoServices\V1\StatusInvest\RequestResponse\ListAction.proto" GrpcServices="Server" />
-	<Protobuf Include="ProtoServices\V1\StatusInvest\statusInvest.proto" GrpcServices="Server" />
+	<Protobuf Include="ProtoServices\V1\StatusInvest\RequestResponse\ListFII.proto" GrpcServices="Both" />
+	<Protobuf Include="ProtoServices\V1\StatusInvest\RequestResponse\ListAction.proto" GrpcServices="Both" />
+	<Protobuf Include="ProtoServices\V1\StatusInvest\statusInvest.proto" GrpcServices="Both" />
   </ItemGroup>
 
 </Project>

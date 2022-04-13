@@ -1,9 +1,11 @@
+using Example.GRPC.API;
+
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddGrpc();
+var startup = new Startup(builder.Configuration);
+startup.ConfigureServices(builder.Services);
 
 var app = builder.Build();
-
-app.MapGrpcService<Example.GRPC.API.Controllers.V1.StatusInvestController>();
+startup.Configure(app, app.Environment);
 
 app.Run();
