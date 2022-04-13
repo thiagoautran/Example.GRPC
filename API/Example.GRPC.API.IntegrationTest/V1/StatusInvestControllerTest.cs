@@ -1,3 +1,4 @@
+using Autransoft.Test.Lib.Program;
 using Example.GRPC.API.ApplicationCore.ProtoServices.V1.StatusInvest;
 using Grpc.Net.Client;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
