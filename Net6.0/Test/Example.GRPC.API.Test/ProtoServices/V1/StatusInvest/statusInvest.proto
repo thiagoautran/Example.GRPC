@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "ProtoServices/V1/StatusInvest/RequestResponse/ListAction.proto";
+import "ProtoServices/V1/StatusInvest/RequestResponse/ListFII.proto";
+
+option csharp_namespace = "Example.GRPC.API.ApplicationCore.ProtoServices.V1.StatusInvest";
+
+package statusinvest.v1;
+
+service StatusInvest {
+  rpc ListAction (Empty) returns (ReturnAction);
+  rpc ListFII (Empty) returns (ReturnFII);
+}
+
+message Empty {}
